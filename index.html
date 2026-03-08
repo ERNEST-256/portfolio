@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ernest Prince - Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- GitHub Calendar CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="apple-dark">
+    <!-- Chapter/Header Section -->
+    <header class="page-header" id="home">
+        <nav class="site-navbar">
+            <div class="site-navbar-inner">
+                <a href="#home" class="site-brand"><span class="brand-neon">EPS</span>Portfolio.</a>
+                <div class="site-nav-right">
+                    <a href="#projects">Work</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                    <span class="site-nav-divider" aria-hidden="true"></span>
+                    <a href="https://github.com/ERNEST-256" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.7.5.1.66-.22.66-.5v-1.73c-2.78.62-3.37-1.22-3.37-1.22-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .08 1.53 1.05 1.53 1.05.88 1.56 2.32 1.11 2.88.84.09-.66.34-1.11.62-1.37-2.22-.26-4.55-1.15-4.55-5.14 0-1.14.4-2.08 1.04-2.81-.1-.26-.45-1.32.1-2.76 0 0 .84-.27 2.75 1.07A9.3 9.3 0 0 1 12 6.84c.85 0 1.71.12 2.5.35 1.9-1.34 2.74-1.07 2.74-1.07.55 1.44.2 2.5.1 2.76.65.73 1.04 1.67 1.04 2.81 0 4-2.34 4.87-4.57 5.13.36.32.67.94.67 1.9v2.81c0 .28.17.61.67.5A10.26 10.26 0 0 0 22 12.23C22 6.58 17.52 2 12 2z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ernest-prince-solomon-310711291/" target="_blank"
+                        rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M6.94 8.5A1.94 1.94 0 1 1 6.94 4.6a1.94 1.94 0 0 1 0 3.9zM5.2 9.8h3.48V20H5.2V9.8zm5.4 0h3.34v1.4h.05c.46-.88 1.6-1.8 3.28-1.8 3.5 0 4.14 2.34 4.14 5.38V20h-3.48v-4.6c0-1.1-.02-2.5-1.5-2.5-1.5 0-1.73 1.2-1.73 2.42V20H10.6V9.8z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <canvas id="techy-canvas" class="techy-canvas"></canvas>
+        <div class="header-container">
+
+            <h1 class="page-title">Ernest Prince Solomon</h1>
+            <h2 class="pre-title">AI Engineer | Backend Developer</h2>
+            <p class="hero-intro">Designing and building scalable microservices and AI-driven systems that transform
+                complex problems into seamless user experiences.</p>
+            <a href="resume.pdf" download class="hero-resume-btn">Download Resume</a>
+
+            <div class="chapternav">
+                <ul class="chapternav-items">
+                    <li class="chapternav-item">
+                        <a href="#frontend">
+                            <span class="chapternav-label glow-text">Backend Systems</span>
+                        </a>
+                    </li>
+                    <li class="chapternav-item">
+                        <a href="#backend">
+                            <span class="chapternav-label glow-text">AI-Integration</span>
+                        </a>
+                    </li>
+                    <li class="chapternav-item">
+                        <a href="#cloud">
+                            <span class="chapternav-label glow-text">Distributed Systems</span>
+                        </a>
+                    </li>
+                    <li class="chapternav-item">
+                        <a href="#database">
+                            <span class="chapternav-label glow-text">Effecient Systems</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Projects Section -->
+    <section class="explore-section" id="projects">
+        <div class="explore-header">
+            <h2 class="section-heading">Selected Work</h2>
+            <p class="work-intro">A selection of systems exploring AI-driven applications, backend architectures, and intelligent automation. Focused on building scalable services, integrating modern AI pipelines, and solving real-world problems.</p>
+        </div>
+
+        <div class="cards-container" id="projectsContainer"></div>
+    </section>
+
+    <!-- About & Skills Combo -->
+    <section class="split-section" id="about">
+        <div class="section-container">
+            <div class="split-grid">
+                <div class="split-text">
+                    <h2 class="typography-headline">About me<br></h2>
+                    <p class="typography-body">I didn’t start out loving technology — I discovered it through building. Once I realized software could turn ideas into real systems, I became fascinated with creating things from scratch. I enjoy taking ownership of problems, designing solutions, and crafting systems that are both practical and elegant.</p>
+                    <p class="typography-body mt-4">My work focuses on building AI-powered systems and scalable backend architectures, combining intelligent automation with reliable software design.</p>
+                </div>
+                <div class="bento-skills">
+                    <div class="skill-group skill-group-backend">
+                        <p class="skill-group-title">Backend</p>
+                        <div class="skill-pill">Node.js</div>
+                        <div class="skill-pill">Express.js</div>
+                        <div class="skill-pill">REST API</div>
+                        <div class="skill-pill">Redis</div>
+                        <div class="skill-pill">MongoDB</div>
+                    </div>
+
+                    <div class="skill-group skill-group-ai">
+                        <p class="skill-group-title">AI / Automation</p>
+                        <div class="skill-pill">LLM Integration</div>
+                        <div class="skill-pill">RAG</div>
+                        <div class="skill-pill">LangGraph</div>
+                        <div class="skill-pill">AI Agents</div>
+                        <div class="skill-pill">n8n</div>
+                         <div class="skill-pill">Vector Databases</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Contributions Section -->
+    <section class="github-section" id="github">
+        <canvas id="github-techy-canvas" class="techy-canvas"></canvas>
+        <div class="section-container">
+            <h2 class="section-heading text-center">Contributions.</h2>
+            <div class="calendar-wrapper">
+                <div class="calendar">
+                    <!-- Loading stuff -->
+                    Loading data just for you...
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="section-container text-center">
+            <h2 class="typography-headline">Let's build together.</h2>
+            <p class="typography-body mb-6">Drop a message to discuss your next big idea.</p>
+
+            <form class="apple-form" id="contactForm">
+                <div class="form-row">
+                    <input type="text" id="name" placeholder="Name" required class="apple-input">
+                    <input type="email" id="email" placeholder="Email" required class="apple-input">
+                </div>
+                <textarea id="message" rows="5" placeholder="Message" required class="apple-input"></textarea>
+                <button type="submit" class="apple-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="apple-footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Work</a>
+                <a href="https://github.com/ERNEST-256">GitHub</a>
+                <a href="https://www.linkedin.com/in/ernest-prince-solomon-310711291/">LinkedIn</a>
+            </div>
+            <p class="mt-4">Copyright © 2026 Ernest Prince Solomon. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="page-backdrop" id="pageBackdrop"></div>
+    <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
