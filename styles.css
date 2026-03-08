@@ -457,6 +457,9 @@ a {
     gap: 44px 72px;
     overflow: visible;
     cursor: default;
+    touch-action: auto;
+    user-select: auto;
+    -webkit-overflow-scrolling: auto;
 }
 
 .explore-section .cards-container.dragging {
