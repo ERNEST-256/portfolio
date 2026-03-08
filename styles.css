@@ -1533,20 +1533,23 @@ body.modal-open .cards-container .product-card:not(.modal-active) .card-details 
         padding: 14px 12px;
         border-radius: 14px;
         overflow: hidden;
+        -webkit-overflow-scrolling: auto;
         scrollbar-width: none;
     }
 
     .calendar-wrapper .calendar {
         min-width: 0;
-        overflow-x: auto;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: thin;
+        width: 100%;
+        overflow: hidden !important;
     }
 
     .calendar-wrapper .calendar>div,
     .calendar-wrapper .calendar svg {
-        min-width: 700px;
+        min-width: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        overflow: hidden !important;
     }
 }
 
@@ -1644,11 +1647,17 @@ body.modal-open .cards-container .product-card:not(.modal-active) .card-details 
 
     .calendar-wrapper .calendar {
         min-width: 0;
+        width: 100%;
+        overflow: hidden !important;
     }
 
     .calendar-wrapper .calendar>div,
     .calendar-wrapper .calendar svg {
-        min-width: 640px;
+        min-width: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        overflow: hidden !important;
     }
 }
 
