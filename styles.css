@@ -29,6 +29,11 @@ body.apple-dark {
     isolation: isolate;
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
+
 body.apple-dark::before {
     content: "";
     position: fixed;
@@ -121,11 +126,12 @@ a {
 .site-navbar-inner {
     max-width: 1180px;
     margin: 0 auto;
-    height: 75px;
+    min-height: 75px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 22px;
+    gap: 14px;
 }
 
 .site-brand {
@@ -145,6 +151,8 @@ a {
     display: flex;
     align-items: center;
     gap: 28px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .site-nav-right a {
@@ -238,7 +246,7 @@ a {
 
 .page-title {
     font-family: "Sora", "Manrope", sans-serif;
-    font-size: 80px;
+    font-size: clamp(44px, 8.2vw, 80px);
     line-height: 1.05;
     font-weight: 800;
     letter-spacing: -0.015em;
@@ -250,7 +258,7 @@ a {
 }
 
 .hero-intro {
-    font-size: 24px;
+    font-size: clamp(17px, 2.1vw, 24px);
     line-height: 1.4;
     color: var(--text-muted);
     max-width: 700px;
@@ -425,7 +433,7 @@ a {
 }
 
 .explore-header .section-heading {
-    font-size: clamp(62px, 5.6vw, 60px);
+    font-size: clamp(38px, 5.6vw, 60px);
     line-height: 0.96;
     font-weight: 800;
     letter-spacing: -0.03em;
@@ -434,7 +442,7 @@ a {
 
 .work-intro {
     max-width: 820px;
-    font-size: clamp(20px, 1.8vw, 25px);
+    font-size: clamp(17px, 1.8vw, 25px);
     line-height: 1.32;
     letter-spacing: -0.016em;
     color: #a5acb7;
@@ -445,8 +453,8 @@ a {
     margin: 0 auto;
     padding: 0 20px;
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 52px 120px;
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+    gap: 44px 72px;
     overflow: visible;
     cursor: default;
 }
@@ -480,7 +488,7 @@ a {
     position: relative;
     display: block;
     border-radius: 30px;
-    min-height: 470px;
+    min-height: clamp(260px, 33vw, 470px);
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.08);
     background:
@@ -561,15 +569,16 @@ a {
 
 .work-title-row {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 16px;
+    flex-wrap: wrap;
 }
 
 .work-actions {
     display: inline-flex;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 12px;
 }
 
@@ -618,7 +627,7 @@ a {
 .work-description {
     margin-top: 14px;
     color: #8f97a5;
-    font-size: clamp(14px, 1.05vw, 23px);
+    font-size: clamp(14px, 1.02vw, 18px);
     line-height: 1.5;
     letter-spacing: -0.01em;
 }
@@ -1320,11 +1329,11 @@ body.modal-open .cards-container .product-card:not(.modal-active) .card-details 
 
 /* Footer */
 .apple-footer {
-    background: #111216;
+    background: #0d0d10;
     color: #9ea3ad;
     font-size: 12px;
     padding: 40px 20px;
-    border-top: 1px solid var(--border-soft);
+    border-top: 0;
     text-align: center;
 }
 
@@ -1343,7 +1352,98 @@ body.modal-open .cards-container .product-card:not(.modal-active) .card-details 
     text-decoration: underline;
 }
 
+@media (max-width: 1180px) {
+    .site-navbar-inner {
+        padding: 0 16px;
+    }
+
+    .explore-section .cards-container {
+        gap: 34px 36px;
+    }
+}
+
+@media (max-width: 992px) {
+    .header-container {
+        padding-top: 86px;
+    }
+
+    .explore-section {
+        padding: 62px 0 76px;
+    }
+
+    .split-grid {
+        gap: 44px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .form-row .apple-input {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 820px) {
+    .site-navbar {
+        position: relative;
+        padding-top: 10px;
+    }
+
+    .site-navbar-inner {
+        min-height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 16px;
+        gap: 10px;
+    }
+
+    .site-nav-right {
+        width: 100%;
+        gap: 16px;
+        justify-content: flex-start;
+    }
+
+    .site-nav-divider {
+        display: none;
+    }
+
+    .header-container {
+        padding-top: 36px;
+    }
+
+    .chapternav-items {
+        flex-wrap: wrap;
+        gap: 18px 22px;
+        padding-bottom: 44px;
+    }
+
+    .explore-header .section-heading {
+        margin-bottom: 14px;
+        line-height: 1.02;
+    }
+
+    .work-intro {
+        max-width: 100%;
+    }
+
+    .explore-section .cards-container {
+        grid-template-columns: 1fr;
+        gap: 38px;
+    }
+
+    .split-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+}
+
 @media (max-width: 768px) {
+    .section-container {
+        padding: 0 16px;
+    }
+
     .explore-section .cards-container {
         grid-template-columns: 1fr;
         gap: 34px;
@@ -1351,35 +1451,26 @@ body.modal-open .cards-container .product-card:not(.modal-active) .card-details 
     }
 
     .work-preview {
-        min-height: 260px;
-        border-radius: 20px;
+        min-height: 240px;
+        border-radius: 18px;
     }
 
     .work-title {
-        font-size: 34px;
+        font-size: clamp(24px, 7vw, 32px);
     }
 
     .work-description {
-        font-size: 22px;
+        font-size: 15px;
     }
 
     .work-tag {
-        font-size: 16px;
-        padding: 8px 14px;
-    }
-
-    .page-title {
-        font-size: 48px;
+        font-size: 13px;
+        padding: 7px 12px;
     }
 
     .section-heading,
     .typography-headline {
-        font-size: 40px;
-    }
-
-    .split-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
+        font-size: clamp(32px, 9vw, 40px);
     }
 
     .hero-resume-btn {
@@ -1397,13 +1488,113 @@ body.modal-open .cards-container .product-card:not(.modal-active) .card-details 
         min-width: 84vw;
     }
 
-    .form-row {
-        flex-direction: column;
-        gap: 0;
+    .work-content {
+        margin-top: 16px;
     }
 
-    .form-row .apple-input {
-        margin-bottom: 20px;
+    .work-actions {
+        width: 100%;
+        gap: 8px;
+    }
+
+    .work-github-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .work-link-icon {
+        font-size: 22px;
+    }
+
+    .contact-section,
+    .split-section,
+    .github-section {
+        padding: 84px 0;
+    }
+}
+
+@media (max-width: 560px) {
+    .site-brand {
+        font-size: 18px;
+    }
+
+    .site-nav-right {
+        gap: 12px;
+    }
+
+    .site-nav-right a {
+        font-size: 14px;
+    }
+
+    .site-nav-right a[aria-label] {
+        width: 18px;
+        height: 18px;
+    }
+
+    .header-container {
+        padding-top: 28px;
+    }
+
+    .hero-intro {
+        margin-bottom: 38px;
+    }
+
+    .hero-resume-btn {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .chapternav-items {
+        justify-content: flex-start;
+    }
+
+    .explore-section {
+        padding: 58px 0 66px;
+    }
+
+    .explore-header {
+        margin-bottom: 30px;
+        padding: 0 16px;
+    }
+
+    .work-intro {
+        font-size: 16px;
+    }
+
+    .work-preview-label {
+        font-size: clamp(22px, 8.2vw, 30px);
+    }
+
+    .work-hover-btn {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateX(-50%) translateY(0);
+        bottom: 14px;
+        font-size: 12px;
+        padding: 8px 14px;
+    }
+
+    .work-actions {
+        gap: 6px;
+    }
+
+    .work-github-btn {
+        font-size: 11px;
+        padding: 7px 10px;
+    }
+
+    .work-tags {
+        gap: 8px;
+    }
+
+    .apple-input,
+    .apple-btn {
+        font-size: 16px;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        gap: 14px 18px;
     }
 }
 

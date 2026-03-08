@@ -303,6 +303,7 @@ if (pageBackdrop) {
 }
 
 // Parallax header effect
+const enableHeroParallax = window.matchMedia('(min-width: 1024px) and (prefers-reduced-motion: no-preference)').matches;
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
     const pageHeader = document.querySelector('.page-header');
@@ -310,6 +311,12 @@ window.addEventListener('scroll', () => {
 
     if (pageHeader) {
         pageHeader.classList.toggle('scrolled', scrollY > 16);
+    }
+
+    if (!enableHeroParallax && headerContent) {
+        headerContent.style.transform = '';
+        headerContent.style.opacity = '';
+        return;
     }
 
     if (headerContent && scrollY < 800) {
